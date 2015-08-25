@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml;
+using System.IO;
 
 namespace MySecondDome
 {
@@ -10,10 +8,25 @@ namespace MySecondDome
     {
         static void Main( string[] args )
         {
-            Console.WriteLine( "信息登记系统" );
-            //00
+            Console.WriteLine( "信息登记系统\n" );
+
+            Console.WriteLine( "你好，欢迎使用信息登记系统" );
+            Console.WriteLine( "" );
+
             Console.WriteLine( "按任意键退出..." );
             Console.ReadKey( );
         }
+
+        private static void WriteXml( )
+        {
+            XmlTextWriter writer = new XmlTextWriter( "message.xml" , null );
+            //创建xml存储数据
+
+            writer.Formatting = Formatting.Indented;
+
+            writer.WriteStartElement( "items");
+
+        }
     }
+
 }
