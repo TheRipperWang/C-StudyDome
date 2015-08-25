@@ -11,7 +11,7 @@ namespace MySecondDome
         static void Main( string[] args )
         {
             Console.WriteLine( "信息登记系统" );
-
+            //00
             Console.WriteLine( "按任意键退出..." );
             Console.ReadKey( );
         }
