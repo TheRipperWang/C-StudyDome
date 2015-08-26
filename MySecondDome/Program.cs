@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Xml;
-using System.IO;
 
 namespace MySecondDome
 {
-    class Program
+    internal class Program
     {
-        static void Main( string[] args )
+        private static void Main( string[] args )
         {
             Console.WriteLine( "信息登记系统\n" );
 
@@ -24,9 +23,7 @@ namespace MySecondDome
 
             writer.Formatting = Formatting.Indented;
 
-            writer.WriteStartElement( "items");
-
+            writer.WriteStartElement( "items" );
         }
     }
-
 }

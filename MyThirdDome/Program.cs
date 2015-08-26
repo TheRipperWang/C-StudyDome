@@ -1,25 +1,10 @@
 ﻿using System;
 using System.Xml;
-using System.IO;
 
 namespace WriteXml
 {
-    class Program
+    internal class Program
     {
-        static void Main( string[] args )
-        {
-            string title = "王成著";
-            string author = "王成";
-            string price = "10";
-      
-            CreaTeXml( title , author , price );
-
-            ReadText( );
-
-            Console.WriteLine( "\n按任意键退出..." );
-            Console.ReadKey( );
-        }
-
         private static void CreaTeXml( string title , string author , string price )
         {
             XmlTextWriter writer = new XmlTextWriter( "titles.xml" , null );
@@ -43,6 +28,19 @@ namespace WriteXml
             writer.Close( );
         }
 
+        private static void Main( string[] args )
+        {
+            string title = "王成著";
+            string author = "王成";
+            string price = "10";
+
+            CreaTeXml( title , author , price );
+
+            ReadText( );
+
+            Console.WriteLine( "\n按任意键退出..." );
+            Console.ReadKey( );
+        }
 
         private static void ReadText( )
         {
@@ -55,13 +53,13 @@ namespace WriteXml
             foreach ( XmlNode xnf in xnl )
             {
                 XmlElement xe = ( XmlElement )xnf;
-                Console.WriteLine( "类别:{0}",xe.GetAttribute( "类别" ) );//显示属性值
-                Console.WriteLine( "品质:{0}",xe.GetAttribute( "品质" ) );
+                Console.WriteLine( "类别:{0}" , xe.GetAttribute( "类别" ) );//显示属性值
+                Console.WriteLine( "品质:{0}" , xe.GetAttribute( "品质" ) );
 
                 XmlNodeList xnf1 = xe.ChildNodes;
                 foreach ( XmlNode xn2 in xnf1 )
                 {
-                    //Console.WriteLine( "编著：{0}\n作者:{0}\n价格:{0}" , xn2.GetElementsByTagName("age");//显示子节点点文本
+                    Console.WriteLine( );//显示子节点点文本
                 }
                 Console.WriteLine( );
             }

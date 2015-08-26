@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyFirstDome
 {
-    class Program
+    internal class Program
     {
-        static void Main( string[] args )
+        private static void Main( string[] args )
         {
             //int x = 10;
             //Console.WriteLine( "你好，世界！" );
@@ -18,14 +14,16 @@ namespace MyFirstDome
 
             Program.Play( );
 
+            Console.WriteLine( "nssdsds")
+
             Console.WriteLine( "按任意键退出..." );
             Console.ReadKey( );
         }
 
         public static void Play( )
         {
-            Console.WriteLine( "玩电脑!");
-            Console.WriteLine( "(￣▽￣)\"");
+            Console.WriteLine( "玩电脑!" );
+            Console.WriteLine( "(￣▽￣)\"" );
         }
     }
 }
