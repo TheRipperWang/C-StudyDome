@@ -14,7 +14,7 @@ namespace MyFirstDome
 
             Program.Play( );
 
-            Console.WriteLine( "nssdsds")
+            Console.WriteLine( "nssdsds" );
 
             Console.WriteLine( "按任意键退出..." );
             Console.ReadKey( );
